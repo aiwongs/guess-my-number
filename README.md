@@ -1,32 +1,46 @@
-Moved here: https://github.com/happywords/guess-my-number
+# Guess My Number (中文修复版)
 
-Guess My Number
-===============
-The numerical version of bulls and cows game.
+这是一个基于 [happywords/guess-my-number](https://github.com/happywords/guess-my-number) 的增强版本。本项目不仅进行了全界面的中文化，还针对原版游戏逻辑中的核心 Bug 进行了修复，并对代码结构进行了模块化重构。
 
-[![][2]][1]
+## 🌟 本版本的主要改进
 
-## How to play
-The computer chooses a number and you must find it. When you try a number you
-will receive feedback. You will know how many digits exists in the computer's
-secret number and how many of them are in the correct position.
+* **核心逻辑修复 (Bugfix)**：
+    * 修复了原版在处理重复数字或特定组合时，“几 A 几 B”判定不准确的问题。
+    * 重构了猜数判定算法，确保在任何情况下反馈结果都严格准确。
+* **全界面中文化**：
+    * 游戏说明、提示信息、交互按钮及反馈语已全部翻译为中文，优化了中文语境下的用户体验。
+* **代码模块化重构**：
+    * 将核心逻辑抽离至独立的 `aiwongs_funs.js` 模块中。
+    * 实现了 UI 表现与游戏逻辑的分离，代码结构更清晰，方便二次开发和维护。
+* **样式与体验优化**：
+    * 微调了 CSS 布局，使其在不同尺寸的屏幕上拥有更好的兼容性。
 
-You can play this game [**here**][1].
+## 🎮 游戏玩法
 
-## How to contribute
-1. File an issue in the repository, using the bug tracker, describing the
-   contribution you'd like to make. This will help us to get you started on the
-   right foot.
-2. Fork the project in your account and create a new branch:
-   `your-great-feature`.
-3. Commit your changes in that branch.
-4. Open a pull request, and reference the initial issue in the pull request
-   message.
+电脑会随机选择一个数字（通常是 4 位不重复数字），你需要通过推理找到它。每次尝试后，你会获得如下反馈：
 
-## License
-See the [LICENSE](./LICENSE) file.
+* **A**：表示数字正确且**位置也正确**。
+* **B**：表示数字正确但**位置不正确**。
 
-  [1]: http://ghitab.github.io/guess-my-number
-  [2]: http://i.imgur.com/vfsRtCY.jpg
+**示例**：如果答案是 `1234`，你猜 `1356`，反馈将是 `1A 1B`（1 是 A，3 是 B）。
 
-[![Contact me on Codementor](https://www.codementor.io/m-badges/ghitab/find-me-on-cm-b.svg)](https://www.codementor.io/@ghitab?refer=badge)
+---
+
+## 🚀 在线演示
+
+你可以通过 GitHub Pages 直接在线游玩：
+[https://aiwongs.github.io/guess-my-number/](https://aiwongs.github.io/guess-my-number/)
+
+---
+
+## 🛠️ 技术细节与贡献
+
+如果你想了解修复细节或参与改进：
+1.  核心算法位于 `aiwongs_funs.js`。
+2.  界面交互位于 `index.html`。
+
+欢迎通过 Issue 提交反馈或直接提交 Pull Request。
+
+## 📝 许可 (License)
+
+本项目遵循原作者的开源许可协议，详见 [LICENSE](LICENSE) 文件。
